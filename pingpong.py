@@ -74,6 +74,14 @@ while game:
         if ball.rect.y > win_height -50 or ball.rect.y < 0:
             speed_y *= -1
         
+        if ball.rect.x > win_width:
+            window.blit(lose2, (200, 200))
+            finish = True
+            
+        
+        if ball.rect.x < 0:
+            window.blit(lose1, (200, 200))
+            finish = True
         
 
 
